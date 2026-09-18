@@ -1,0 +1,11 @@
+services:
+  compiler-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smart-source-compiler
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
